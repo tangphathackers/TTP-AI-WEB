@@ -19,6 +19,25 @@ done
 cmd deviceidle enable
 cmd deviceidle force-idle
 cmd deviceidle step
+execute_global() {
+settings put global "$1" "$2"
+}
+execute_global window_move_animation_scale 0.78
+execute_global window_move_animation_duration_scale 0.78
+execute_global display_animation_scale 0.78
+execute_global display_animation_duration_scale 1.12
+execute_global transition_animation_scale 0.78
+execute_global transition_animation_duration_scale 1.12
+execute_global window_animation_scale 0.78
+execute_global window_animation_duration_scale 0.78
+execute_global animator_scale 1.12
+execute_global animator_duration_scale 1.12
+execute_global animation_scale_window_transition 0.78
+execute_global animation_scale_animator_duration 1.12
+execute_global app_transition_animation_scale 0.78
+execute_global app_transition_animation_duration_scale 1.12
+execute_global recent_app_transition_scale 1
+execute_global recent_app_transition_duration_scale 1.12
 sleep 0.3
 }
 idle >/dev/null 2>&1 && echo "➡️ Success" || echo "➡️ Failed"
