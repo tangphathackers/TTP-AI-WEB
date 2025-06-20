@@ -105,7 +105,7 @@ setprop debug.incremental.enable_read_timeouts_after_install true
 setprop debug.force_low_ram false
 setprop debug.angle.validation false
 setprop debug.c2.use_dmabufheaps 1
-} >/dev/null 2>&1 
+} >/dev/null 2>&1 &
 pid_op
 PowerSuper 
 echo "❤️ Đã Tối Ưu"
