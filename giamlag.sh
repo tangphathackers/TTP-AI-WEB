@@ -108,3 +108,4 @@ setprop debug.c2.use_dmabufheaps 1
 } >/dev/null 2>&1 
 pid_op
 PowerSuper 
+echo "❤️ Đã Tối Ưu"
