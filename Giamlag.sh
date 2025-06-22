@@ -105,6 +105,9 @@ setprop debug.incremental.enable_read_timeouts_after_install true
 setprop debug.force_low_ram false
 setprop debug.angle.validation false
 setprop debug.c2.use_dmabufheaps 1
+setprop security.perf_harden 1
+setprop security.perf_harden 0
+setprop debug.perf_cpu_time_max_percent 30
 }
 pid_op
 PowerSuper >/dev/null 2>&1&
