@@ -1,6 +1,6 @@
 setprop security.perf_harden 1
 setprop security.perf_harden 0
-setprop debug.perf_cpu_time_max_percent 70
+setprop debug.perf_cpu_time_max_percent 80
 setprop debug.perf_event_max_sample_rate -1
 setprop debug.perf_event_mlock_kb 16384
 setprop debug.perf_event_sample_period_max -1
