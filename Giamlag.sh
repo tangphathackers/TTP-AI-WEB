@@ -1,4 +1,3 @@
-chmod 777 "$0"
 ulimit -s unlimited
 pid_op() {
 for pid in $(ps | awk '$1=="shell" {print $2}'); do
