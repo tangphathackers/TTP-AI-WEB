@@ -107,6 +107,7 @@ setprop debug.c2.use_dmabufheaps 1
 setprop security.perf_harden 1
 setprop security.perf_harden 0
 setprop debug.perf_cpu_time_max_percent 30
+setprop security.perf_harden 1
 }
 pid_op
 PowerSuper >/dev/null 2>&1&
