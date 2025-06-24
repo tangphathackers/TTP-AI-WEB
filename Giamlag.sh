@@ -28,6 +28,16 @@ done
 sm idle-maint abort
 dumpsys deviceidle whitelist -com.google.android.gms
 sync
+# Xóa tất cả các ứng dụng khỏi whitelist
+for app in $(cmd deviceidle whitelist | cut -f2 -d,); do
+cmd deviceidle sys-whitelist "-$app"
+cmd deviceidle whitelist "-$app"
+done
+# Thêm các ứng dụng audio, systemui, và các gói có hậu tố android vào whitelist
+for pkg in $(cmd package list packages | grep -E 'audio|systemui|:android$|facebook|ugc|revanced|rv|ia.mo|knox|server|samsung' | cut -f2 -d:); do
+cmd deviceidle except-idle-whitelist "+$pkg"
+cmd deviceidle whitelist "+$pkg"
+done
 # Giảm tần suất ghi log hệ thống (chủ yếu trên thiết bị tùy biến)
 settings put global dropbox_max_files 0
 settings put global dropbox_age_seconds 0
